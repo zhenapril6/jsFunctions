@@ -1,18 +1,17 @@
-const numbersSum = sumcb(1, 2, callBackFunc);
-console.log(numbersSum);
-
-function callBackFunc() {
-    console.log('callBack');
+const callback = function() {
+    
 }
-function sumcb(a, b, callBack) {
-    callBack();
+
+const numbersSum = sum(1, 2, function(sum) {
+    return sum + 5;
+});
+
+function sum(a, b, callback) {
+    const newSum = callback(a + b);
+    console.log(newSum);
     return a + b;
 }
 
 function sum1(a, b) {
-    return a + b;
-}
-
-const sum2 = function(a, b) {
     return a + b;
 }
