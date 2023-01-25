@@ -1,8 +1,9 @@
-const numbers = sum(6, 4, function(sum) {
-    return sum + 10;
-}); 
-
-function sum(a, b, callback) {
-    const newSum = callback(a + b);
-    console.log(newSum);
+function sum(a, b) {
+    console.log(a + b);
 }
+
+const sum2 = function(callback) {
+    callback(6, 4);
+}
+
+sum2(sum);
