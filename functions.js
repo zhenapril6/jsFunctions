@@ -1,9 +1,12 @@
-function sum(a, b) {
-    console.log(a + b);
+const logger = function(data) {
+    console.log(data, new Date());
 }
 
-const sum2 = function(callback) {
-    callback(6, 4);
+const sum = function(a, b, logger) {
+    logger({a, b});
+    const result = a + b;
+    logger(result);
+    return result;
 }
 
-sum2(sum);
+sum(6, 4, logger);
