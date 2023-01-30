@@ -1,12 +1,8 @@
-const logger = function(data) {
-    console.log(data, new Date());
-}
+const Student = function(name, age) {
+    this.name = name
+    this.age = age
+    }
 
-const sum = function(a, b, logger) {
-    logger({a, b});
-    const result = a + b;
-    logger(result);
-    return result;
-}
+const studentZhenya = new Student('Zhenya', 33);
 
-sum(6, 4, logger);
+console.log(studentZhenya);
